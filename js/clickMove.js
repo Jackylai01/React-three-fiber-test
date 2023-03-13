@@ -280,19 +280,19 @@ function init() {
   }
 
   // 建立樹
-  function createTree(posX, posZ) {
-    // Set some random values so our trees look different.
+ function createTree(posX, posZ) {
+    // 設定隨機值，讓樹的形狀不會一樣
     var randomScale = Math.random() * 3 + 0.8;
     var randomRotateY = Math.PI / Math.floor(Math.random() * 32 + 1);
 
-    // Create the trunk.
+    // 建立樹幹
     var geometry = new THREE.CylinderGeometry(
       characterSize / 3.5,
       characterSize / 2.5,
       characterSize * 1.3,
       8,
     );
-
+    //建立材質
     var material = new THREE.MeshToonMaterial({ color: 0x664422 });
     var trunk = new THREE.Mesh(geometry, material);
     trunk.position.set(posX, (characterSize * 1.3 * randomScale) / 2, posZ);
@@ -301,6 +301,8 @@ function init() {
 
     var geometry = new THREE.DodecahedronGeometry(characterSize);
     var material = new THREE.MeshToonMaterial({ color: 0x44aa44 });
+
+    //樹的大小、旋轉角度和材質設置為隨機數值
     var treeTop = new THREE.Mesh(geometry, material);
     treeTop.position.set(
       posX,
