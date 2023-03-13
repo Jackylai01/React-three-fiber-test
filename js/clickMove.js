@@ -263,6 +263,7 @@ function init() {
     }
   }
   animate();
+  //requestAnimationFrame-下一個畫面更新時呼叫函數，可以持續不斷地渲染動畫，每秒都有60FPS	
   function animate() {
     requestAnimationFrame(animate);
     render();
