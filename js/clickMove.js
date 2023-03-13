@@ -352,7 +352,7 @@ function init() {
 
     geometry.dynamic = true;
 
-    //卡通著色設定
+    //指定物件的自發光-點擊地板才會產生。
     var material = new THREE.MeshToonMaterial({
       color: 0x00ccff,
       emissive: 0x00ccff,
